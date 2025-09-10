@@ -1,0 +1,40 @@
+{
+  "ver": "1.2.1",
+  "importer": "render-texture",
+  "imported": true,
+  "uuid": "04f30066-018a-4930-9293-e1857a0f9e46",
+  "files": [
+    ".json"
+  ],
+  "subMetas": {
+    "f9941": {
+      "importer": "rt-sprite-frame",
+      "uuid": "04f30066-018a-4930-9293-e1857a0f9e46@f9941",
+      "displayName": "RT-Scene",
+      "id": "f9941",
+      "name": "spriteFrame",
+      "userData": {
+        "imageUuidOrDatabaseUri": "04f30066-018a-4930-9293-e1857a0f9e46",
+        "width": 960,
+        "height": 640
+      },
+      "ver": "1.0.0",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "width": 960,
+    "height": 640,
+    "anisotropy": 0,
+    "minfilter": "linear",
+    "magfilter": "linear",
+    "mipfilter": "none",
+    "wrapModeS": "repeat",
+    "wrapModeT": "repeat",
+    "redirect": "04f30066-018a-4930-9293-e1857a0f9e46@f9941"
+  }
+}

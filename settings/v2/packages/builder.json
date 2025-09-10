@@ -1,0 +1,17 @@
+{
+  "__version__": "1.3.9",
+  "textureCompressConfig": {
+    "userPreset": {
+      "f5WCjENe1JPq+BnqNSqDxd": {
+        "name": "Ultra",
+        "options": {
+          "web": {
+            "webp": {
+              "quality": 10
+            }
+          }
+        }
+      }
+    }
+  }
+}

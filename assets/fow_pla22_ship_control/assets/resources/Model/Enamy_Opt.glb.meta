@@ -1,0 +1,105 @@
+{
+  "ver": "2.3.13",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "f7c0bc8c-8f38-4462-949e-6d41a6b22314",
+  "files": [],
+  "subMetas": {
+    "93713": {
+      "importer": "gltf-scene",
+      "uuid": "f7c0bc8c-8f38-4462-949e-6d41a6b22314@93713",
+      "displayName": "",
+      "id": "93713",
+      "name": "Enamy_Opt.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "e2349": {
+      "importer": "gltf-mesh",
+      "uuid": "f7c0bc8c-8f38-4462-949e-6d41a6b22314@e2349",
+      "displayName": "",
+      "id": "e2349",
+      "name": "Mesh.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 7763
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "f7c0bc8c-8f38-4462-949e-6d41a6b22314@e2349"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "f7c0bc8c-8f38-4462-949e-6d41a6b22314@93713"
+      ]
+    },
+    "meshCompress": {
+      "compress": true,
+      "enable": true,
+      "encode": false,
+      "quantize": true
+    },
+    "legacyFbxImporter": false,
+    "allowMeshDataAccess": true,
+    "addVertexColor": false,
+    "generateLightmapUVNode": false,
+    "meshOptimizer": {
+      "enable": false,
+      "algorithm": "simplify",
+      "simplifyOptions": {
+        "targetRatio": 1,
+        "enableSmartLink": true,
+        "agressiveness": 7,
+        "maxIterationCount": 100
+      }
+    },
+    "meshSimplify": {
+      "enable": true,
+      "targetRatio": 0,
+      "errorRate": 0.2
+    },
+    "meshOptimize": {
+      "enable": true,
+      "vertexFetch": true,
+      "vertexCache": true
+    }
+  }
+}

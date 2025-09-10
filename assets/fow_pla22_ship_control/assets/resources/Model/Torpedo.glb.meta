@@ -1,0 +1,75 @@
+{
+  "ver": "2.3.13",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "32cbaa0e-c7ff-4a9c-b53c-941fca788dfa",
+  "files": [],
+  "subMetas": {
+    "72660": {
+      "importer": "gltf-scene",
+      "uuid": "32cbaa0e-c7ff-4a9c-b53c-941fca788dfa@72660",
+      "displayName": "",
+      "id": "72660",
+      "name": "Torpedo.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "e2349": {
+      "importer": "gltf-mesh",
+      "uuid": "32cbaa0e-c7ff-4a9c-b53c-941fca788dfa@e2349",
+      "displayName": "",
+      "id": "e2349",
+      "name": "Mesh.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 740
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "32cbaa0e-c7ff-4a9c-b53c-941fca788dfa@e2349"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "32cbaa0e-c7ff-4a9c-b53c-941fca788dfa@72660"
+      ]
+    }
+  }
+}

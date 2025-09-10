@@ -1,0 +1,251 @@
+{
+  "ver": "2.3.13",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "db086066-026d-4deb-866f-8dcd3c026726",
+  "files": [
+    "__original-animation-0.cconb",
+    "__original-animation-1.cconb"
+  ],
+  "subMetas": {
+    "80c75": {
+      "importer": "gltf-mesh",
+      "uuid": "db086066-026d-4deb-866f-8dcd3c026726@80c75",
+      "displayName": "",
+      "id": "80c75",
+      "name": "Mesh.001.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 364
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "b46eb": {
+      "importer": "gltf-mesh",
+      "uuid": "db086066-026d-4deb-866f-8dcd3c026726@b46eb",
+      "displayName": "",
+      "id": "b46eb",
+      "name": "Mesh.004.mesh",
+      "userData": {
+        "gltfIndex": 1,
+        "triangleCount": 9975
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "e2349": {
+      "importer": "gltf-mesh",
+      "uuid": "db086066-026d-4deb-866f-8dcd3c026726@e2349",
+      "displayName": "",
+      "id": "e2349",
+      "name": "Mesh.mesh",
+      "userData": {
+        "gltfIndex": 2,
+        "triangleCount": 358
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "c2696": {
+      "importer": "gltf-animation",
+      "uuid": "db086066-026d-4deb-866f-8dcd3c026726@c2696",
+      "displayName": "",
+      "id": "c2696",
+      "name": "Idle.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 5.0333333015441895
+        },
+        "events": [],
+        "embeddedPlayers": [],
+        "editorExtras": {
+          "embeddedPlayerGroups": []
+        },
+        "speed": 1,
+        "auxiliaryCurves": {}
+      },
+      "ver": "1.0.17",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "9937d": {
+      "importer": "gltf-animation",
+      "uuid": "db086066-026d-4deb-866f-8dcd3c026726@9937d",
+      "displayName": "",
+      "id": "9937d",
+      "name": "Radar.animation",
+      "userData": {
+        "gltfIndex": 1,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 2.0333333015441895
+        },
+        "events": [],
+        "embeddedPlayers": [],
+        "editorExtras": {
+          "embeddedPlayerGroups": []
+        },
+        "speed": 1,
+        "auxiliaryCurves": {}
+      },
+      "ver": "1.0.17",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "f9d1d": {
+      "importer": "gltf-skeleton",
+      "uuid": "db086066-026d-4deb-866f-8dcd3c026726@f9d1d",
+      "displayName": "",
+      "id": "f9d1d",
+      "name": "Armature.skeleton",
+      "userData": {
+        "gltfIndex": 0,
+        "jointsLength": 4
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "043e4": {
+      "importer": "gltf-scene",
+      "uuid": "db086066-026d-4deb-866f-8dcd3c026726@043e4",
+      "displayName": "",
+      "id": "043e4",
+      "name": "Main_Ship.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "db086066-026d-4deb-866f-8dcd3c026726@80c75",
+        "db086066-026d-4deb-866f-8dcd3c026726@b46eb",
+        "db086066-026d-4deb-866f-8dcd3c026726@e2349"
+      ],
+      "skeletons": [
+        "db086066-026d-4deb-866f-8dcd3c026726@f9d1d"
+      ],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "db086066-026d-4deb-866f-8dcd3c026726@043e4"
+      ]
+    },
+    "animationImportSettings": [
+      {
+        "name": "Idle",
+        "duration": 5.0333333015441895,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Idle",
+            "from": 0,
+            "to": 5.0333333015441895,
+            "wrapMode": 2,
+            "previousId": "c2696"
+          }
+        ]
+      },
+      {
+        "name": "Radar",
+        "duration": 2.0333333015441895,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Radar",
+            "from": 0,
+            "to": 2.0333333015441895,
+            "wrapMode": 2,
+            "previousId": "9937d"
+          }
+        ]
+      }
+    ],
+    "meshCompress": {
+      "enable": true,
+      "compress": true,
+      "encode": false,
+      "quantize": true
+    },
+    "meshSimplify": {
+      "targetRatio": 0.6,
+      "enable": true,
+      "errorRate": 0.5
+    },
+    "meshOptimize": {
+      "vertexFetch": false
+    },
+    "legacyFbxImporter": false,
+    "allowMeshDataAccess": true,
+    "addVertexColor": false,
+    "generateLightmapUVNode": false,
+    "meshOptimizer": {
+      "enable": false,
+      "algorithm": "simplify",
+      "simplifyOptions": {
+        "targetRatio": 1,
+        "enableSmartLink": true,
+        "agressiveness": 7,
+        "maxIterationCount": 100
+      }
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "__type__": "cc.Material",
+  "_name": "",
+  "_objFlags": 0,
+  "__editorExtras__": {},
+  "_native": "",
+  "_effectAsset": {
+    "__uuid__": "113a72d8-20cd-42cd-ba96-37cc1046971a",
+    "__expectedType__": "cc.EffectAsset"
+  },
+  "_techIdx": 1,
+  "_defines": [
+    {
+      "USE_TWOSIDE": true,
+      "USE_NORMAL_MAP": true,
+      "USE_INSTANCING": true,
+      "DEFAULT_UV": "v_uv1",
+      "USE_WATER_SCATTERING": true
+    },
+    {},
+    {},
+    {}
+  ],
+  "_states": [
+    {
+      "priority": 129,
+      "rasterizerState": {},
+      "depthStencilState": {},
+      "blendState": {
+        "targets": [
+          {}
+        ]
+      }
+    },
+    {
+      "priority": 129,
+      "rasterizerState": {},
+      "depthStencilState": {},
+      "blendState": {
+        "targets": [
+          {}
+        ]
+      }
+    },
+    {
+      "priority": 129,
+      "rasterizerState": {},
+      "depthStencilState": {},
+      "blendState": {
+        "targets": [
+          {}
+        ]
+      }
+    },
+    {
+      "rasterizerState": {},
+      "depthStencilState": {},
+      "blendState": {
+        "targets": [
+          {}
+        ]
+      }
+    }
+  ],
+  "_props": [
+    {
+      "mainColor": {
+        "__type__": "cc.Color",
+        "r": 17,
+        "g": 78,
+        "b": 82,
+        "a": 168
+      },
+      "normalStrength": 3.322,
+      "roughness": 0.718,
+      "fresnelIntensity": 0,
+      "normalMap": {
+        "__uuid__": "38b39ba6-819d-49ad-9026-feddd1067fd1@6c48a",
+        "__expectedType__": "cc.Texture2D"
+      },
+      "normalMapDetailed": {
+        "__uuid__": "38b39ba6-819d-49ad-9026-feddd1067fd1@6c48a",
+        "__expectedType__": "cc.Texture2D"
+      },
+      "baseTiling": 78,
+      "waterSpeed": 0.783,
+      "detailedSpeed": 0.919,
+      "detailedTiling": 0.504,
+      "detailedIntensity": 0.533,
+      "waterInScatterColor": {
+        "__type__": "cc.Color",
+        "r": 190,
+        "g": 235,
+        "b": 241,
+        "a": 255
+      },
+      "waterScatterCoef": 10
+    },
+    {},
+    {},
+    {}
+  ]
+}
