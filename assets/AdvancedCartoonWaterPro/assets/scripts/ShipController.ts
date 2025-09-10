@@ -97,8 +97,8 @@ export class ShipController3D extends Component {
   @property(AudioController)
   private audioController: AudioController = null;
 
-  @property(Node)
-  private particles: Node = null;
+  //@property(Node)
+  //private particles: Node = null;
 
   @property(Node)
   guidePanel : Node = null;
@@ -184,7 +184,7 @@ export class ShipController3D extends Component {
   }
 
   start() {
-    this.particles.active = false;
+    //this.particles.active = false;
     const collider = this.getComponent(Collider);
     if (collider) {
       collider.on('onCollisionEnter', this.onCollisionEnter, this);
@@ -274,7 +274,7 @@ export class ShipController3D extends Component {
   private onTouchStart(_t: EventTouch) {
     if (!this.started && this.canStart) {
       this.started = true;
-      this.particles.active = true;
+      //this.particles.active = true;
     }
     
     // Сохраняем начальную позицию касания
