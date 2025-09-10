@@ -93,7 +93,7 @@
     },
     "meshSimplify": {
       "enable": true,
-      "targetRatio": 0,
+      "targetRatio": 1,
       "errorRate": 0.2
     },
     "meshOptimize": {
