@@ -1747,9 +1747,9 @@
     ],
     "value": {
       "__type__": "cc.Vec3",
-      "x": 0.1,
-      "y": 0.1,
-      "z": 0.1
+      "x": 0.25,
+      "y": 0.25,
+      "z": 0.25
     }
   },
   {
@@ -9488,7 +9488,6 @@
     "audioController": {
       "__id__": 763
     },
-    "particles": null,
     "guidePanel": {
       "__id__": 600
     },
@@ -9725,7 +9724,7 @@
     "_priority": 1073741824,
     "_fov": 45,
     "_fovAxis": 0,
-    "_orthoHeight": 638.0307692307692,
+    "_orthoHeight": 540,
     "_near": 1,
     "_far": 2000,
     "_color": {
@@ -22936,10 +22935,7 @@
       "__uuid__": "d032ac98-05e1-4090-88bb-eb640dcb5fc1@b47c0",
       "__expectedType__": "cc.TextureCube"
     },
-    "_envmapLDR": {
-      "__uuid__": "6f01cf7f-81bf-4a7e-bd5d-0afc19696480@b47c0",
-      "__expectedType__": "cc.TextureCube"
-    },
+    "_envmapLDR": null,
     "_diffuseMapHDR": null,
     "_diffuseMapLDR": null,
     "_enabled": true,

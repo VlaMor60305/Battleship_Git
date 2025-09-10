@@ -345,7 +345,7 @@
     },
     "meshSimplify": {
       "enable": true,
-      "targetRatio": 0
+      "targetRatio": 0.8
     }
   }
 }
