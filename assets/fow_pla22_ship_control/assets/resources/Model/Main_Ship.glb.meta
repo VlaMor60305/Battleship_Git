@@ -226,7 +226,7 @@
       "quantize": true
     },
     "meshSimplify": {
-      "targetRatio": 0.6,
+      "targetRatio": 1,
       "enable": true,
       "errorRate": 0.5
     },
