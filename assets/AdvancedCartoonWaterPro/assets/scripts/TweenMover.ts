@@ -47,7 +47,8 @@ export class TweenMoverWorld extends Component {
     if (targetWorld) {
       Vec3.copy(this._endWorld, targetWorld);
     } else {
-      Vec3.copy(this._endWorld, this.endWorldPosition);
+      //Vec3.copy(this._endWorld, this.endWorldPosition);
+      Vec3.copy(this._endWorld, this.lookAtNode.worldPosition);
     }
 
     this.node.lookAt(this._endWorld);

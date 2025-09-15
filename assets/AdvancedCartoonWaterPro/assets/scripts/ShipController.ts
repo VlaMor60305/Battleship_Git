@@ -172,7 +172,7 @@ export class ShipController3D extends Component {
       this.guidePanel.active = true;
       this.canStart = true;
     },
-    5
+    0.1
     );
 
     this.killButton.node.on(Button.EventType.CLICK, this.killEnemyFunc, this);
@@ -590,7 +590,7 @@ export class ShipController3D extends Component {
           // После завершения анимации возвращения переключаем на статичную камеру
           //this.cameraShake.defaultClip = this.cameraShake.clips[3];
           //this.cameraShake.play();
-        }, 2);
+        }, 0);
       }, 3);
     } else {
       super_html_playable.download();
