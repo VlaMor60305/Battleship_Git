@@ -25,6 +25,12 @@ export class CameraOrbitClamp extends Component {
   @property({ type: Vec3, tooltip: 'Максимальные углы (deg). Обычно: (10, 170, 10).' })
   public maxEuler: Vec3 = new Vec3(10, 170, 10);
 
+  @property({ type: Vec3, tooltip: 'Целевые минимальные углы (deg) для проверки положения камеры.' })
+  public minEulerTarget: Vec3 = new Vec3(-5, 165, -5);
+
+  @property({ type: Vec3, tooltip: 'Целевые максимальные углы (deg) для проверки положения камеры.' })
+  public maxEulerTarget: Vec3 = new Vec3(5, 175, 5);
+
   @property({ tooltip: 'Скорость сглаживания (1/с). Чем больше — тем быстрее камера следует за целью.' })
   public smoothSpeed = 8;
 
@@ -88,6 +94,30 @@ export class CameraOrbitClamp extends Component {
     this._currentEuler.z += (this._targetEuler.z - this._currentEuler.z) * t;
 
     this._cameraNode.eulerAngles = this._currentEuler;
+
+    console.log("IS SEE ENEMY? " + this.isWithinTargetBounds());
+  }
+
+  /**
+   * Проверяет, находится ли камера в пределах целевых углов
+   * @returns true если камера в пределах minEulerTarget и maxEulerTarget
+   */
+  public isWithinTargetBounds(): boolean {
+    if (!this._cameraNode) return false;
+    
+    const currentEuler = this._cameraNode.eulerAngles;
+    
+    // Нормализуем углы для корректного сравнения
+    const normalizedX = this._normalizeAngle(currentEuler.x);
+    const normalizedY = this._normalizeAngle(currentEuler.y);
+    const normalizedZ = this._normalizeAngle(currentEuler.z);
+    
+    // Проверяем каждую ось
+    const inX = normalizedX >= this.minEulerTarget.x && normalizedX <= this.maxEulerTarget.x;
+    const inY = normalizedY >= this.minEulerTarget.y && normalizedY <= this.maxEulerTarget.y;
+    const inZ = normalizedZ >= this.minEulerTarget.z && normalizedZ <= this.maxEulerTarget.z;
+    
+    return inX && inY && inZ;
   }
 
   // --- обработка ввода ---

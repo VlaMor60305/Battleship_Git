@@ -105,4 +105,20 @@ export class TweenMoverWorld extends Component {
     // безопасность
     this._moving = false;
   }
+
+  // TweenMoverWorld.ts - добавь этот метод в класс
+  public resetTorpedo() {
+      // Останавливаем все твины
+      tween(this.node).stop();
+      
+      // Возвращаем торпеду в начальную позицию и делаем видимой
+      this.node.active = true;
+      this.node.setWorldPosition(this._startWorld);
+      this._moving = false;
+      
+      // Сбрасываем направление взгляда
+      if (this.lookAtNode) {
+          this.node.lookAt(this.lookAtNode.worldPosition);
+      }
+  }
 }

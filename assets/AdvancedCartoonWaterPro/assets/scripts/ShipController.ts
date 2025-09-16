@@ -61,6 +61,9 @@ export class ShipController3D extends Component {
   @property(Node)
   private cameraAim: Node = null;
 
+  @property(CameraOrbitClamp)
+  private cameraAimController : CameraOrbitClamp;
+
   @property(CameraFollow)
   private cameraMovment: CameraFollow;
 
@@ -272,6 +275,7 @@ export class ShipController3D extends Component {
   }
 
   private onTouchStart(_t: EventTouch) {
+    console.log("////////////////////////1");
     if (!this.started && this.canStart) {
       this.started = true;
       //this.particles.active = true;
@@ -283,6 +287,15 @@ export class ShipController3D extends Component {
     this._isTouching = true;
     
     this._lastTouchTime = Date.now();
+  }
+
+  private alternativeTouchStart() {
+    console.log("////////////////////////1");
+    if (!this.started && this.canStart) {
+      this.started = true;
+      //this.particles.active = true;
+    }
+    
   }
 
   private onTouchMove(event: EventTouch) {
@@ -501,10 +514,12 @@ export class ShipController3D extends Component {
     console.log('Корабль врезался');
     this.finished = true;
     this.fail.active = true;
+
     this.scheduleOnce(() => {
+      this.blinkingHit.node.active = false;
       this.packshot.active = true;
       this.installButton.active = false;
-    }, 2.5);
+    }, 1);
   }
 
   finishFirstGameplay() {
@@ -559,43 +574,58 @@ export class ShipController3D extends Component {
 
   private killEnemyFunc() {
     if(!this.killedFirst) {
-      this.killEnemy.play();
-      if(this.torpedoShootingParticle != null)
-      {
-        this.torpedoShootingParticle.play();
-      }
-      this.torpeda.startMoveWorld();
-      this.fireButton.active = false;
-      this.audioController.playFire();
-      this.activateFirstGameplay();
-      
-      this.scheduleOnce(() => {
-        this.killedFirst = true;
-        this.finished = false;
-        this.yaw = this.node.eulerAngles.y || 0;
-        this._inertiaVelocity = 0;
+        // Проверяем, находится ли камера в целевых пределах
+        const isAimed = this.cameraAimController.isWithinTargetBounds();
+        
+        if (!isAimed) {
+            // Камера не прицелилась - запускаем торпеду, но не убиваем врага
+            if(this.torpedoShootingParticle != null) {
+                this.torpedoShootingParticle.play();
+            }
+            this.torpeda.startMoveWorld();
+            this.audioController.playFire();
+            this.fireButton.getComponent(Button).interactable = false;
 
-        this.camera.active = true;
-          this.cameraAim.active = false;
-        // Включаем анимацию возвращения камеры (клип №4)
-        this.cameraShake.defaultClip = this.cameraShake.clips[4];
-        this.cameraShake.play();
-        this.isSyncingCameras = false;
+            // Через 2 секунды возвращаем торпеду и активируем кнопку снова
+            this.scheduleOnce(() => {
+                this.torpeda.resetTorpedo(); // Метод, который нужно добавить в TweenMoverWorld
+                this.fireButton.getComponent(Button).interactable = true;
+            }, 2);
+            return;
+        }
 
+        // Камера прицелилась - стандартная логика убийства
+        this.killEnemy.play();
+        if(this.torpedoShootingParticle != null) {
+            this.torpedoShootingParticle.play();
+        }
+        this.torpeda.startMoveWorld();
+        this.fireButton.active = false;
+        this.audioController.playFire();
+        this.activateFirstGameplay();
+        
         this.scheduleOnce(() => {
-          this.cameraMovment.isMoving = true;
-          
-          this.startedSecond = false;
-          
-          // После завершения анимации возвращения переключаем на статичную камеру
-          //this.cameraShake.defaultClip = this.cameraShake.clips[3];
-          //this.cameraShake.play();
-        }, 0);
-      }, 3);
+            this.killedFirst = true;
+            this.finished = false;
+            this.yaw = this.node.eulerAngles.y || 0;
+            this._inertiaVelocity = 0;
+
+            this.camera.active = true;
+            this.cameraAim.active = false;
+            
+            this.cameraShake.defaultClip = this.cameraShake.clips[4];
+            this.cameraShake.play();
+            this.isSyncingCameras = false;
+
+            this.scheduleOnce(() => {
+                this.cameraMovment.isMoving = true;
+                this.startedSecond = false;
+            }, 0);
+        }, 3);
     } else {
-      super_html_playable.download();
-      console.log('[Redirect]: redirected');
-      this.audioController.playBell();
+        super_html_playable.download();
+        console.log('[Redirect]: redirected');
+        this.audioController.playBell();
     }
-  }
+}
 }

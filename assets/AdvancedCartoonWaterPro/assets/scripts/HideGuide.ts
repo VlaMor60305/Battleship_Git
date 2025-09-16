@@ -11,6 +11,7 @@ export class HideGuide extends Component {
 
     public onTouchStart() {
         //input.off(Input.EventType.TOUCH_START, this.onTouchStart, this);
+        console.log("////////////////////////2");
         this.Guide.active = false
     }
 }
